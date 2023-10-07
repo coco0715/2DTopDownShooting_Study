@@ -3858,6 +3858,7 @@ GameObject:
   - component: {fileID: 1319450360}
   - component: {fileID: 1319450361}
   - component: {fileID: 1319450362}
+  - component: {fileID: 1319450363}
   m_Layer: 0
   m_Name: Palyer
   m_TagString: Untagged
@@ -4036,6 +4037,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 993578885}
   testPrefab: {fileID: 6827240061062701563, guid: 1ef9ec14eeef1134fa1aa190d492bd8c, type: 3}
+--- !u!114 &1319450363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319450354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df798e0d04131c64495b40e620f49fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats:
+    statsChangeType: 2
+    MaxHealth: 10
+    Speed: 5
+    attackSO: {fileID: 11400000, guid: b51682d201cd074458c72c022c483aec, type: 2}
+  statsModifiers: []
 --- !u!1 &1333469834
 GameObject:
   m_ObjectHideFlags: 0
