@@ -3631,7 +3631,7 @@ Transform:
   m_GameObject: {fileID: 993578884}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0.4, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3851,12 +3851,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1319450355}
-  - component: {fileID: 1319450356}
   - component: {fileID: 1319450357}
+  - component: {fileID: 1319450356}
   - component: {fileID: 1319450358}
   - component: {fileID: 1319450359}
   - component: {fileID: 1319450360}
   - component: {fileID: 1319450361}
+  - component: {fileID: 1319450362}
   m_Layer: 0
   m_Name: Palyer
   m_TagString: Untagged
@@ -4018,9 +4019,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0258e08b83414e442b49589638ca3afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armRenderer: {fileID: 0}
-  armPivot: {fileID: 0}
-  characterRenderer: {fileID: 0}
+  armRenderer: {fileID: 668054953}
+  armPivot: {fileID: 1901020477}
+  characterRenderer: {fileID: 1290314793}
+--- !u!114 &1319450362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319450354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc0b3f76ead01fb478e4d8c87b2cc534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpawnPosition: {fileID: 993578885}
+  testPrefab: {fileID: 6827240061062701563, guid: 1ef9ec14eeef1134fa1aa190d492bd8c, type: 3}
 --- !u!1 &1333469834
 GameObject:
   m_ObjectHideFlags: 0
