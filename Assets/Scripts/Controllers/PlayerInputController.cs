@@ -35,17 +35,6 @@ public class PlayerInputController : TopDownCharacterController
 
     public void OnFire(InputValue value)
     {
-        Debug.Log("OnFire" + value.ToString());
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        IsAttacking = value.isPressed;
     }
 }
