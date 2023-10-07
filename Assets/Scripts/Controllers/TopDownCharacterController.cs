@@ -12,6 +12,13 @@ public class TopDownCharacterController : MonoBehaviour
     private float _timeSinceLastAttack = float.MaxValue;
     protected bool IsAttacking { get; set; }
 
+    protected CharacterStatsHendler Stats { get; private set; }
+
+    protected virtual void Awake()
+    {
+        Stats = GetComponent<CharacterStatsHendler>();
+    }
+
     protected virtual void Update()
     {
         HendleAttackDelay();
@@ -19,12 +26,17 @@ public class TopDownCharacterController : MonoBehaviour
 
     private void HendleAttackDelay()
     {
-        if(_timeSinceLastAttack <= 0.2f) // TODO
+        if (Stats.CurrentStats.attackSO == null)
+        {
+            return;
+        }
+
+        if (_timeSinceLastAttack <= Stats.CurrentStats.attackSO.delay)
         {
             _timeSinceLastAttack += Time.deltaTime;
         }
         
-        if(IsAttacking && _timeSinceLastAttack > 0.2f)
+        if(IsAttacking && _timeSinceLastAttack > Stats.CurrentStats.attackSO.delay)
         {
             _timeSinceLastAttack = 0;
             CallAttackEvent();
