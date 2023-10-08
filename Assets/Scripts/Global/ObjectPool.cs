@@ -27,7 +27,7 @@ public class ObjectPool : MonoBehaviour
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
-            poolDictionary.Add(pool.tag, objectPool);
+            poolDictionary.Add(pool.prefab.name, objectPool);
         }
     }
 
