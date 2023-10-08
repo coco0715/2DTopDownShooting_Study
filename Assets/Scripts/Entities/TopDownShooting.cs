@@ -48,7 +48,7 @@ public class TopDownShooting : MonoBehaviour
     {
         _projectileManager.ShootBullet(
                 projectileSpawnPosition.position,
-                RotateVector2(_aimDirection,angle),
+                RotateVector2(_aimDirection, angle),
                 rangedAttackData
             );
     }
