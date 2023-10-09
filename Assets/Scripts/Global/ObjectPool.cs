@@ -8,22 +8,22 @@ public class ObjectPool : MonoBehaviour
     public struct Pool
     {
         public string tag;
-        public GameObject prefab;
+        public UnityEngine.GameObject prefab;
         public int size;
     }
 
     public List<Pool> pools;
-    public Dictionary<string, Queue<GameObject>> poolDictionary;
+    public Dictionary<string, Queue<UnityEngine.GameObject>> poolDictionary;
 
     private void Awake()
     {
-        poolDictionary = new Dictionary<string, Queue<GameObject>>();
+        poolDictionary = new Dictionary<string, Queue<UnityEngine.GameObject>>();
         foreach (var pool in pools)
         {
-            Queue<GameObject> objectPool = new Queue<GameObject>();
+            Queue<UnityEngine.GameObject> objectPool = new Queue<UnityEngine.GameObject>();
             for (int i = 0; i < pool.size; i++)
             {
-                GameObject obj = Instantiate(pool.prefab);
+                UnityEngine.GameObject obj = Instantiate(pool.prefab);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }
@@ -31,12 +31,12 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    public GameObject SpawnFromPool(string tag)
+    public UnityEngine.GameObject SpawnFromPool(string tag)
     {
         if (!poolDictionary.ContainsKey(tag))
             return null;
 
-        GameObject obj = poolDictionary[tag].Dequeue();
+        UnityEngine.GameObject obj = poolDictionary[tag].Dequeue();
         poolDictionary[tag].Enqueue(obj);
 
         return obj;
