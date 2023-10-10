@@ -7,6 +7,8 @@ public class PlayerInputController : TopDownCharacterController
 {
     private Camera _camera;
 
+    [SerializeField] private SpriteRenderer characterRanderer;
+
     protected override void Awake()
     {
         base.Awake();
