@@ -175,7 +175,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrcShaman
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5657900656853018872, guid: 8b8785f3f1cb8ab4bbda278916fe3ec5, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3715,7 +3720,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8262537358614582215, guid: 036ef1d138909754a822b185adffa8eb, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4058,6 +4068,7 @@ GameObject:
   - component: {fileID: 1319450362}
   - component: {fileID: 1319450363}
   - component: {fileID: 1319450364}
+  - component: {fileID: 1319450365}
   m_Layer: 8
   m_Name: Palyer
   m_TagString: Player
@@ -4250,7 +4261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    MaxHealth: 10
+    maxHealth: 0
     Speed: 5
     attackSO: {fileID: 11400000, guid: b51682d201cd074458c72c022c483aec, type: 2}
   statsModifiers: []
@@ -4266,6 +4277,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae68df4d8c48ad4478988a75defd586a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1319450365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319450354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715df32d7fecf604ab1fcc92b172bea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
 --- !u!1 &1333469834
 GameObject:
   m_ObjectHideFlags: 0

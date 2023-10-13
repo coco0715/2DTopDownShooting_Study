@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class HelthSystem : MonoBehaviour
+public class HealthSystem : MonoBehaviour
 {
     [SerializeField] private float healthChangeDelay = .5f;
 
@@ -17,26 +18,23 @@ public class HelthSystem : MonoBehaviour
 
     public float CurrentHealth { get; private set; }
 
-    public float MaxHealth => _statsHandler.CurrentStats.maxHealth;
+    public float MaxHealth => _statsHandler.CurrentStats.MaxHealth;
 
-    public void Awake()
+    private void Awake()
     {
         _statsHandler = GetComponent<CharacterStatsHendler>();
     }
 
-    // Start is called before the first frame update
     private void Start()
     {
-        CurrentHealth = _statsHandler.CurrentStats.maxHealth;
+        CurrentHealth = _statsHandler.CurrentStats.MaxHealth;
     }
 
-    // Update is called once per frame
     private void Update()
     {
         if (_timeSinceLastChange < healthChangeDelay)
         {
             _timeSinceLastChange += Time.deltaTime;
-
             if (_timeSinceLastChange >= healthChangeDelay)
             {
                 OnInvincibilityEnd?.Invoke();
@@ -62,7 +60,7 @@ public class HelthSystem : MonoBehaviour
         }
         else
         {
-            OnDeath?.Invoke();
+            OnDamage?.Invoke();
         }
 
         if (CurrentHealth <= 0f)
