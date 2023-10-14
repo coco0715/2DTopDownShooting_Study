@@ -26,7 +26,7 @@ public class CharacterStatsHendler : MonoBehaviour
         CurrentStats = new CharacterStats { attackSO = attackSO };
         // TODO
         CurrentStats.statsChangeType = baseStats.statsChangeType;
-        CurrentStats.MaxHealth = baseStats.MaxHealth;
-        CurrentStats.Speed = baseStats.Speed;
+        CurrentStats.maxHealth = baseStats.maxHealth;
+        CurrentStats.speed = baseStats.speed;
     }
 }

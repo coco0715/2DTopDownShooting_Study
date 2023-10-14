@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 3862379607980614085}
   - component: {fileID: 7514790629055348955}
   - component: {fileID: 8728771779742140565}
+  - component: {fileID: 8531203448882963692}
   m_Layer: 6
   m_Name: Goblin
   m_TagString: Untagged
@@ -232,7 +233,7 @@ MonoBehaviour:
   baseStats:
     statsChangeType: 2
     maxHealth: 0
-    Speed: 2
+    speed: 0
     attackSO: {fileID: 11400000, guid: ce9ef8c910b79584ba00bdbc63b47add, type: 2}
   statsModifiers: []
 --- !u!114 &4939155993887444831
@@ -287,3 +288,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+--- !u!114 &8531203448882963692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262537358614582215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cda258417d0be4688ca8d7dda498a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
