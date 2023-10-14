@@ -46,7 +46,7 @@ public class TopDownMovement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        direction = direction * _stats.CurrentStats.Speed;
+        direction = direction * _stats.CurrentStats.speed;
         if (knockbackDuration > 0.0f)
         {
             direction += _knockback;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7698521838947387126}
   - component: {fileID: 59877756066501424}
   - component: {fileID: 4988145972324693361}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,9 @@ GameObject:
   - component: {fileID: 4939155993887444831}
   - component: {fileID: 3862379607980614085}
   - component: {fileID: 7514790629055348955}
-  m_Layer: 0
+  - component: {fileID: 8728771779742140565}
+  - component: {fileID: 8531203448882963692}
+  m_Layer: 6
   m_Name: Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +217,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6410912438506641518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,8 +232,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    MaxHealth: 3
-    Speed: 2
+    maxHealth: 0
+    speed: 0
     attackSO: {fileID: 11400000, guid: ce9ef8c910b79584ba00bdbc63b47add, type: 2}
   statsModifiers: []
 --- !u!114 &4939155993887444831
@@ -271,5 +273,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae68df4d8c48ad4478988a75defd586a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8728771779742140565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262537358614582215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715df32d7fecf604ab1fcc92b172bea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
+--- !u!114 &8531203448882963692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262537358614582215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cda258417d0be4688ca8d7dda498a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -9,15 +9,24 @@ public class TopDownAnimationController : TopDownAnimations
     private static readonly int Attack = Animator.StringToHash("Attack");
     private static readonly int IsHit = Animator.StringToHash("IsHit/");
 
+    private HealthSystem _healthSystem;
+
     protected override void Awake()
     {
         base.Awake();
+        _healthSystem = GetComponent<HealthSystem>();
     }
     // Start is called before the first frame update
     void Start()
     {
         controller.OnAttackEvent += Attacking;
         controller.OnMoveEvent += Move;
+
+        if (_healthSystem != null)
+        {
+            _healthSystem.OnDamage += Hit;
+            _healthSystem.OnInvincibilityEnd += InvincibilityEnd;
+        }
     }
 
     private void Move(Vector2 obj)
@@ -37,6 +46,6 @@ public class TopDownAnimationController : TopDownAnimations
 
     private void InvincibilityEnd()
     {
-        animator.SetBool(IsHit, true);
+        animator.SetBool(IsHit, false);
     }
 }
