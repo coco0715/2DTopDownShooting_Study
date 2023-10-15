@@ -7,7 +7,7 @@ public class TopDownAnimationController : TopDownAnimations
 {
     private static readonly int IsWalking = Animator.StringToHash("IsWalking");
     private static readonly int Attack = Animator.StringToHash("Attack");
-    private static readonly int IsHit = Animator.StringToHash("IsHit/");
+    private static readonly int IsHit = Animator.StringToHash("IsHit");
 
     private HealthSystem _healthSystem;
 
